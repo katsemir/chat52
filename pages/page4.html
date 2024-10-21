@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Link Sharing</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; margin-top: 50px; }
+        .link-box { padding: 10px; background-color: lightgray; display: inline-block; }
+        button { padding: 10px 20px; margin-left: 10px; background-color: orange; border: none; color: white; cursor: pointer; }
+        .go-button { background-color: orange; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Share Chat Link</h1>
+        <div class="link-box">
+            <span>https://classroom.google.com</span>
+            <button class="btn btn-primary" onclick="navigator.clipboard.writeText('https://classroom.google.com')">Copy</button>
+            <button class="btn btn-secondary go-button" onclick="window.location.href='https://classroom.google.com'">Go</button>
+        </div>
+    </div>
+</body>
+</html>
