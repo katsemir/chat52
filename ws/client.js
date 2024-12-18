@@ -2,17 +2,17 @@ const {WebSocket} = require('ws');
 
 const wsClientFactory = (id) => {
     const ws = new WebSocket('ws://localhost:8080');
-
+    
     ws.on('error', console.error);
-
+    
     ws.on('open', function open() {
-        console.log('connected ' + (id) + ' ')
-
-        ws.send(' ' + (id) + ' Hello');
+        console.log(`connected ${id}`);
+        
+        ws.send(`${id} HELLO`);
     });
-
+    
     ws.on('message', function message(data) {
-      console.log(' ' + (id) + ' received: %s', data);
+      console.log(`${id} received: %s`, data);
     });
 }
 
